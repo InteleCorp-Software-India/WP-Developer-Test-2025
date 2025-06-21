@@ -1,0 +1,17 @@
+name: Basic PHP Syntax Test
+
+on:
+  push:
+    paths:
+      - 'functions.php'
+  pull_request:
+    paths:
+      - 'functions.php'
+
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run PHP Linter
+        run: php -l functions.php
