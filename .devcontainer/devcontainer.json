@@ -1,19 +1,17 @@
 {
-  "name": "WordPress PHP Dev",
-  "image": "mcr.microsoft.com/devcontainers/php:8.2",
-  "features": {
-    "ghcr.io/devcontainers/features/composer:1": {}
-  },
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "postCreateCommand": "php -v",
+  "name": "WordPress Dev Env",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "wordpress",
+  "workspaceFolder": "/var/www/html/wp-content/plugins/wptask",
+  "postCreateCommand": "bash /post-create-setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
         "bmewburn.vscode-intelephense-client",
-        "esbenp.prettier-vscode"
+        "xdebug.php-debug"
       ]
     }
-  }
+  },
+  "forwardPorts": [80, 3306],
+  "remoteUser": "www-data"
 }
