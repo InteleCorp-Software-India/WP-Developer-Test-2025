@@ -1,0 +1,19 @@
+{
+  "name": "WordPress PHP Dev",
+  "image": "mcr.microsoft.com/devcontainers/php:8.2",
+  "features": {
+    "ghcr.io/devcontainers/features/composer:1": {}
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "php -v",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
