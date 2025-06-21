@@ -1,6 +1,6 @@
 {
   "name": "WordPress Dev Env",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": "../docker-compose.yml",
   "service": "wordpress",
   "workspaceFolder": "/var/www/html/wp-content/plugins/wptask",
   "postCreateCommand": "bash /post-create-setup.sh",
@@ -12,6 +12,6 @@
       ]
     }
   },
-  "forwardPorts": [80, 3306],
+  "forwardPorts": [80],
   "remoteUser": "www-data"
 }
